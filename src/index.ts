@@ -9,11 +9,11 @@ const app = new Application<HTMLCanvasElement>({
 	height: 480
 });
 
-const clampy: Sprite = Sprite.from("clampy.png");
+const clampy: Sprite = Sprite.from("./clampy.png");
 
 clampy.anchor.set(0.5);
 
-clampy.x = app.screen.width / 2;
-clampy.y = app.screen.height / 2;
+clampy.x = 250;
+clampy.y = 250;
 
 app.stage.addChild(clampy);
