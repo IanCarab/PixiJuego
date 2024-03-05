@@ -9,8 +9,8 @@ const app = new Application<HTMLCanvasElement>({
 	height: 480
 });
 
-const clampy: Sprite = Sprite.from("./clampy.png");
-
+const clampy: Sprite = Sprite.from("./eye.jpg");
+console.log(eye.width,eye.height);
 clampy.anchor.set(0.5);
 
 clampy.x = 250;
