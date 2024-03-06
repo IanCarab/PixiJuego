@@ -16,8 +16,9 @@ async function init() {
 					name: "Sprites",
 					assets:
 					{
+						
 						"Clampy" : "./clampy.png",
-						"Tim" : "./eye.jgp",
+						
 					}
 				},
 		]
@@ -31,21 +32,24 @@ async function DrawScreen() {
 	const Sprites = await Assets.loadBundle("Sprites");
 
 	const clampy: Sprite = Sprite.from(Sprites.Clampy);
-	//const eyesore: Sprite = Sprite.from(Sprites.Tim);
+
+	const texture= await Assets.load('./eye.jpg');
+	const TimEye = Sprite.from(texture);
 
 
 	console.log(clampy.width+ " " +clampy.height);
 
-	clampy.anchor.set(0);
+	clampy.anchor.set(0.5);
 
 	clampy.x = app.screen.width / 4;
 	clampy.y = app.screen.height / 4;
-	clampy.scale.set(0.25);
+	clampy.scale.set(0.5);
 
-	/* eyesore.x = app.screen.width / 4;
-	eyesore.y = app.screen.height / 4;
-	eyesore.scale.set(0.25); */
+	TimEye.anchor.set(-0.5);
+	TimEye.x = app.screen.width / 4;
+	TimEye.y = app.screen.height / 4;
+	TimEye.scale.set(0.25);
 	
 	app.stage.addChild(clampy);
-	/* app.stage.addChild(eyesore); */
+	app.stage.addChild(TimEye);
 }
